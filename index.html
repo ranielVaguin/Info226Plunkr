@@ -32,32 +32,23 @@
 
   <div class="directoryMenu">
     <form>
-      <fieldset>
-        <legend class="formTitle">Directory</legend>
         <div class="directoryMenu">
           <ul class="directoryList">
             <div class="buildingList">
-              <div class="overlay">
                 <div class="text">Rutherford House</div>
-              </div>
               <p><a href="#" class="buttonView">View</a></p>
             </div>
 
             <div class="buildingList">
-              <div class="overlay">
                 <div class="text">Rutherford House</div>
-              </div>
               <p><a href="#" class="buttonView">View</a></p>
             </div>
 
             <div class="buildingList">
-              <div class="overlay">
                 <div class="text">Rutherford House</div>
-              </div>
               <p><a href="#" class="buttonView">View</a></p>
             </div>
           </ul>
-      </fieldset>
     </form>
     </div>
 
@@ -128,73 +119,95 @@
     <div class="projectMenu">
       <form>
         <div class="projectInfo">
-        <h3 class="projectName">Project Name:</h3>
-        <h4 class="projectStartDate">Start Date: <input type="date"></h4>
-        <h4 class="projectEndDate">Finish Date: <input type="date"></h4>
-        <h4 class="projectContact">Contact Person:</h4>
-        <h4 class="projectManagers">
+          <h3 class="projectName">Project Name:</h3>
+          <h4 class="projectStartDate">Start Date: <input type="date"></h4>
+          <h4 class="projectEndDate">Finish Date: <input type="date"></h4>
+          <h4 class="projectContact">Contact Person:</h4>
+          <h4 class="projectManagers">
             <label id = "projectManager">Project Manager/s: </label>
 				    <select id = "projectManagerList">
 					<option value = "Mark">Mark Capinpin</option>
 					<option value = "Ranielle">Ranielle Aguinaldo</option>
 				</select>
 			  </h4>
-        <h4 class="projectContractor">Contractor/s: </h4>
+          <h4 class="projectContractor">Contractor/s: </h4>
         </div>
 
-    <div class="projectWorks">
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Project Name</th>
-            <th>Project Schedule</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <input type="checkbox" name="record">
-            </td>
-            <td>Project 1</td>
-            <td>Project Schedule 1</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        <div class="projectWorks">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Project Name</th>
+                <th>Project Schedule</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox" name="record">
+                </td>
+                <td>Project 1</td>
+                <td>Project Schedule 1</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" name="record">
+                </td>
+                <td>Project 2</td>
+                <td>Project Schedule 2</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" name="record">
+                </td>
+                <td>Project 3</td>
+                <td>Project Schedule 3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-    <div class="commentBox">
+        <div class="commentBox">
+          <div class="comments">
+          <form>
+            <input type="text" id="commentsBox" placeholder="Write Comment">
+          </form>
+          <form>
+            <input type="button" id="addingComment" value="Add Comment">
+          </form>
+          </div>
 
-      <form class="write">
-        <input type="text" id="commentBox" placeholder="Write Comment">
+          <div class="boxContent">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="record">
+                  </td>
+                  <td>Comments</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="projectButtons">
+              <button type="button" class="deleteRow">Delete Row</button>
+              <button type="button" class="ArchiveRow">Archive</button>
+            </div>
+          </div>
       </form>
-      <form class="addComment">
-        <input type="button" id="addingComment" value="Add Comment">
-      </form>
-
-      <div class="boxContent">
-        <table>
-          <thead>
-            <tr>
-              <th>Comments</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <input type="checkbox" name="record">
-              </td>
-              <td>Comments</td>
-            </tr>
-          </tbody>
-        </table>
-        <button type="button" class="deleteRow">Delete Row</button>
-        <button type="button" class="ArchiveRow">Archive</button>
-        <button type="button" class="viewRow">View Project</button>
       </div>
-      </form>
-</div>
 
+  <div class="projectArchives">
+    <form>
+      
+    </form>
+  </div>
       <br>
       <br>
 </body>
