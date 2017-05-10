@@ -12,84 +12,190 @@
   <script src="app.js"></script>
 </head>
 
-<body ng-controller="MainCtrl">
-  <div class="login">
+<body ng-controller="MainCtrl" class="container">
+
+  <div class="logIn">
     <form>
-      <fieldset>
-        <legend class="formTitle">Login</legend>
-        <input type="text" placeholder="Username">
-        <br>
-        <input type="text" placeholder="Password">
-        <br>
-        <button>Login</button>
-        <button>Cancel</button>
-      </fieldset>
+      <div class="inputForm">
+        <input type="text" name="username" placeholder="Username">
+      </div>
+      <div class="inputForm">
+        <input type="text" name="password" placeholder="Password">
+      </div>
+      <button type="submit" value="Submit" class="signIn">Sign In</button>
     </form>
   </div>
 
   <br>
   <br>
 
-  <div class="building">
+
+  <div class="directoryMenu">
     <form>
       <fieldset>
         <legend class="formTitle">Directory</legend>
+        <div class="directoryMenu">
+          <ul class="directoryList">
+            <div class="buildingList">
+              <div class="overlay">
+                <div class="text">Rutherford House</div>
+              </div>
+              <p><a href="#" class="buttonView">View</a></p>
+            </div>
+
+            <div class="buildingList">
+              <div class="overlay">
+                <div class="text">Rutherford House</div>
+              </div>
+              <p><a href="#" class="buttonView">View</a></p>
+            </div>
+
+            <div class="buildingList">
+              <div class="overlay">
+                <div class="text">Rutherford House</div>
+              </div>
+              <p><a href="#" class="buttonView">View</a></p>
+            </div>
+          </ul>
+      </fieldset>
+    </form>
+    </div>
+
+
+
+    <br>
+    <br>
+
+    <div class="buildingMenu">
+      <form>
+
+        <div class="buildingInfo">
+          <h3 class="buildingName">Building Name:</h3>
+          <h4 class="buildingLocation">Building Location:</h4>
+          <h4 class="buildingType">Building Type:</h4>
+          <h4 class="buildingStartDate">Building Start Date: <input type="date"></h4>
+          <h4 class="buildingEndDate">Building End Date: <input type="date"></h4>
+        </div>
+
+        <div class="projectTable">
+          <h3 class="buildingProjects">Building Projects</h3>
+
+          <div class="addProject">
+            <input type="text" id="project" placeholder="Project Name">
+            <input type="text" id="schedule" placeholder="Project Schedule">
+            <input type="button" class="addRow" value="Add Project">
+          </div>
+
+          <table class="fill">
+            <thead>
+              <tr>
+                <th id="tableHead"></th>
+                <th id="tableHead">Project Name</th>
+                <th id="tableHead">Project Schedule</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="radio" name="record">
+                </td>
+                <td>Project 1</td>
+                <td>Project Schedule 1</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" name="record">
+                </td>
+                <td>Project 1</td>
+                <td>Project Schedule 1</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="tableButtons">
+            <button type="button" class="deleteRow">Delete Row</button>
+            <button type="button" class="ArchiveRow">Archive</button>
+            <button type="button" class="viewRow">View Project</button>
+            <button type="button" class="archive">Project Archives</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="projectMenu">
+      <form>
+        <div class="projectInfo">
+        <h3 class="projectName">Project Name:</h3>
+        <h4 class="projectStartDate">Start Date: <input type="date"></h4>
+        <h4 class="projectEndDate">Finish Date: <input type="date"></h4>
+        <h4 class="projectContact">Contact Person:</h4>
+        <h4 class="projectManagers">
+            <label id = "projectManager">Project Manager/s: </label>
+				    <select id = "projectManagerList">
+					<option value = "Mark">Mark Capinpin</option>
+					<option value = "Ranielle">Ranielle Aguinaldo</option>
+				</select>
+			  </h4>
+        <h4 class="projectContractor">Contractor/s: </h4>
+        </div>
+
+    <div class="projectWorks">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Project Name</th>
+            <th>Project Schedule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="checkbox" name="record">
+            </td>
+            <td>Project 1</td>
+            <td>Project Schedule 1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="commentBox">
+
+      <form class="write">
+        <input type="text" id="commentBox" placeholder="Write Comment">
+      </form>
+      <form class="addComment">
+        <input type="button" id="addingComment" value="Add Comment">
+      </form>
+
+      <div class="boxContent">
         <table>
           <thead>
             <tr>
-              <th></th>
-              <th>Building Name</th>
-              <th>Address</th>
+              <th>Comments</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                <input type="radio" name="record" id="radioButton">
+                <input type="checkbox" name="record">
               </td>
-              <td>Building 1</td>
-              <td>Building Address 1</td>
+              <td>Comments</td>
             </tr>
           </tbody>
         </table>
-        <button type="button" class="viewProjectButton">View Project</button>
-      </fieldset>
-    </form>
-  </div>
-
-  <br>
-  <br>
-
-  <form>
-    <fieldset>
-      <legend class="formTitle">Building</legend>
-      <div id="building info">
-        <strong id="buildingtype">Type of building:</strong>
-        <span class="buldingname">BName1</span>
+        <button type="button" class="deleteRow">Delete Row</button>
+        <button type="button" class="ArchiveRow">Archive</button>
+        <button type="button" class="viewRow">View Project</button>
       </div>
-      <button id="projectarchives">Project Archives</button>
-      <div id="projectlist">
-        <strong>Projects</strong>
-        <br>
-        <li style="list-style-type: none;">
-          <span class="projectname">Name1</span>
-          <span class="view"><button>View</button></span>
-          <span class="delete"><button>Delete</button></span>
-          <span class="archive"><button>Archive</button></span>
-        </li>
-        <li style="list-style-type: none;">
-          <span class="projectname">Name2</span>
-          <span class="view"><button>View</button></span>
-          <span class="delete"><button>Delete</button></span>
-          <span class="archive"><button>Archive</button></span>
-        </li>
-      </div>
-      <button id="addproject">Add Project</button>
-    </fieldset>
-  </form>
+      </form>
+</div>
 
-  <br>
-  <br>
+      <br>
+      <br>
 </body>
-
 </html>
