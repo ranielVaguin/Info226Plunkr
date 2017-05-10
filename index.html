@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html ng-app="plunker">
 
-  <head>
-    <meta charset="utf-8" />
-    <title>AngularJS Plunker</title>
-    <script>document.write('<base href="' + document.location + '" />');</script>
-    <link rel="stylesheet" href="style.css" />
-    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.12/angular.js" data-semver="1.4.9"></script>
-    <script src="app.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.12/angular.js" data-semver="1.4.9"></script>
+  <script src="app.js"></script>
+</head>
 
-  <body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl">
+  <div class="login">
     <form>
-    <fieldset>
-      <legend class="formTitle">Login</legend>
-      <input type="text" placeholder="Username">
-      <br>
-      <input type="text" placeholder="Password">
-      <br>
-      <button>Login</button>
-      <button>Cancel</button>
-    </fieldset>
-  </form>
+      <fieldset>
+        <legend class="formTitle">Login</legend>
+        <input type="text" placeholder="Username">
+        <br>
+        <input type="text" placeholder="Password">
+        <br>
+        <button>Login</button>
+        <button>Cancel</button>
+      </fieldset>
+    </form>
+  </div>
 
   <br>
   <br>
 
-  <form>
-    <fieldset>
-      <legend class="formTitle">Directory</legend>
-      <span class="building">Building</span>
-      <span class="address">Address</span>
-      <li style="list-style-type: none;">
-        <span class="buildingname">BName1</span>
-        <span class="buildingaddress">Address1</span>
-        <span class="view"><button>View</button></span> 
-      </li>
-      <li style="list-style-type: none;">
-        <span class="buildingname">BName2</span>
-        <span class="buildingaddress">Address2</span>
-        <span class="view"><button>View</button></span>
-      </li>
-    </fieldset>
-  </form>
+  <div class="building">
+    <form>
+      <fieldset>
+        <legend class="formTitle">Directory</legend>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Building Name</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="radio" name="record" id="radioButton">
+              </td>
+              <td>Building 1</td>
+              <td>Building Address 1</td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" class="viewProjectButton">View Project</button>
+      </fieldset>
+    </form>
+  </div>
 
   <br>
   <br>
@@ -74,9 +87,9 @@
       <button id="addproject">Add Project</button>
     </fieldset>
   </form>
-  
+
   <br>
   <br>
-  </body>
+</body>
 
 </html>
