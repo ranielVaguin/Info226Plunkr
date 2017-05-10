@@ -15,7 +15,7 @@ body {
   position: relative;
   background: #557E8B;
   max-width: 250px;
-  margin: 0 auto 100px;
+  margin: 0 auto 50px;
   padding: 45px;
   text-align: center;
 }
@@ -47,6 +47,24 @@ body {
 }
 
 /** Directory **/
+
+.directoryMenu {
+  position: relative;
+  background: #557E8B;
+  width: 800px;
+  height: 300px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.directoryList {
+  padding: 50px;
+}
+
+.buildingList {
+  padding: 5px;
+  box-sizing: border-box;
+}
 
 /*Building Form*/
 
@@ -135,8 +153,8 @@ table th, table td {
 .projectMenu {
   position: relative;
   background: #557E8B;
-  width: 800px;
-  height: 400px;
+  width: 1000px;
+  height: 800px;
   margin: 0 auto 50px;
   text-align: center;
 }
@@ -158,4 +176,42 @@ table th, table td {
   top: 260px;
   left: 10px;
 }
+
+.commentBox {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.projectButtons {
+  margin-top: 10px;
+}
+
+.comments {
+  margin-bottom: 10px;
+}
+
+.comments #commentsBox {
+  width: 400px;
+  height: 200px;
+}
+
+.comments #addingComment {
+  text-transform: uppercase;
+  background: #356372;
+  border: 0;
+  width: 200px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.comments #addingComment:hover {
+  background: #819FA9;
+  color: #000;
+}
+
+
+
 
