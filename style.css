@@ -34,7 +34,7 @@ body {
   text-transform: uppercase;
   background: #356372;
   border: 0;
-  width: 100%;
+  width: 49.1%;
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
@@ -47,7 +47,6 @@ body {
 }
 
 /** Directory **/
-
 
 
 .directoryMenu {
@@ -64,13 +63,14 @@ body {
     padding: 20px 6px 0px 60px;
     float: left;
     width: 24.99999%;
+    margin-top: 20px;
 }
 
 .directoryContent {
   position: relative;
   width: 50%;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 .directoryContent img {
@@ -286,6 +286,17 @@ table th, table td {
   color: #000;
 }
 
+/*Project Archives*/
 
+.projectArchives {
+  position: absolute;
+  background: #557E8B;
+  width: 1000px;
+  height: 800px;
+  top: 900px;
+  text-align: center;
+}
 
-
+.archiveButtons {
+  margin-top: 10px;
+}
