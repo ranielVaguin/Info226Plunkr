@@ -16,13 +16,16 @@
 
   <div class="logIn">
     <form>
+      <h3 class="logoName">Happy Building Contractors</h3>
       <div class="inputForm">
-        <input type="text" name="username" placeholder="Username">
+        <input type="text" placeholder={{username}} ng-model="user">
       </div>
       <div class="inputForm">
-        <input type="text" name="password" placeholder="Password">
+        <input type="text" placeholder={{password}} ng-model="pword">
       </div>
-      <button type="submit" value="Submit" class="signIn">Sign In</button>
+      <button type="submit" value="Submit" class="signIn" ng-click="clickSIGNIN()">Sign In</button>
+      <button type="submit" value="Cancel" class="cancel" ng-click="clickCANCEL()">Cancel</button>
+      {{feedback}}
     </form>
   </div>
 
@@ -34,9 +37,9 @@
     <form>
       <div class="directoryContainer">
         <div class="directoryContent">
-          <a><img src="https://d.ibtimes.co.uk/en/full/1378564/gta-5-online-1-13-high-life-update-all-new-five-apartments-view-price-interior-location-revealed.jpg"></a>
+          <a><img src="https://vignette4.wikia.nocookie.net/gtawiki/images/b/b2/IAAHeadquarters-GTAV.png"></a>
           <div class="overlay">
-            <div class="text">Rutherford House</div>
+            <div class="text">Rutherford Building</div>
           </div>
         </div>
         <div class="quickView">
@@ -46,9 +49,9 @@
 
       <div class="directoryContainer">
         <div class="directoryContent">
-          <a><img src="https://d.ibtimes.co.uk/en/full/1378564/gta-5-online-1-13-high-life-update-all-new-five-apartments-view-price-interior-location-revealed.jpg"></a>
+          <a><img src="https://vignette1.wikia.nocookie.net/gtawiki/images/b/bd/ArcadiusBusinessCenter-GTAV.png"></a>
           <div class="overlay">
-            <div class="text">Rutherford House</div>
+            <div class="text">Victoria Building</div>
           </div>
           <div class="quickView">
             <p><a href="#" class="buttonView">View</a></p>
@@ -58,9 +61,9 @@
 
       <div class="directoryContainer">
         <div class="directoryContent">
-          <a><img src="https://d.ibtimes.co.uk/en/full/1378564/gta-5-online-1-13-high-life-update-all-new-five-apartments-view-price-interior-location-revealed.jpg"></a>
+          <a><img src="https://vignette2.wikia.nocookie.net/gtawiki/images/2/25/FIBHeadquarters-GTAV.png"></a>
           <div class="overlay">
-            <div class="text">Rutherford House</div>
+            <div class="text">Hugh McKenzie Building</div>
           </div>
           <div class="quickView">
             <p><a href="#" class="buttonView">View</a></p>
@@ -70,9 +73,9 @@
 
       <div class="directoryContainer">
         <div class="directoryContent">
-          <a><img src="https://d.ibtimes.co.uk/en/full/1378564/gta-5-online-1-13-high-life-update-all-new-five-apartments-view-price-interior-location-revealed.jpg"></a>
+          <a><img src="https://vignette3.wikia.nocookie.net/gtawiki/images/5/54/LittleSeoulTower-GTAV.png"></a>
           <div class="overlay">
-            <div class="text">Rutherford House</div>
+            <div class="text">Kirk Building</div>
           </div>
           <div class="quickView">
             <p><a href="#" class="buttonView">View</a></p>
@@ -82,9 +85,9 @@
 
       <div class="directoryContainer">
         <div class="directoryContent">
-          <a><img src="https://d.ibtimes.co.uk/en/full/1378564/gta-5-online-1-13-high-life-update-all-new-five-apartments-view-price-interior-location-revealed.jpg"></a>
+          <a><img src="https://vignette3.wikia.nocookie.net/gtawiki/images/1/11/WeazelPlaza-GTA5.png"></a>
           <div class="overlay">
-            <div class="text">Rutherford House</div>
+            <div class="text">Murphy Building</div>
           </div>
           <div class="quickView">
             <p><a href="#" class="buttonView">View</a></p>
@@ -94,9 +97,9 @@
 
       <div class="directoryContainer">
         <div class="directoryContent">
-          <a><img src="https://d.ibtimes.co.uk/en/full/1378564/gta-5-online-1-13-high-life-update-all-new-five-apartments-view-price-interior-location-revealed.jpg"></a>
+          <a><img src="https://vignette4.wikia.nocookie.net/gtawiki/images/f/f2/SchlongbergSachsCenter-StreetView-GTAV.png"></a>
           <div class="overlay">
-            <div class="text">Rutherford House</div>
+            <div class="text">Student Union</div>
           </div>
           <div class="quickView">
             <p><a href="#" class="buttonView">View</a></p>
@@ -259,11 +262,44 @@
     </form>
     </div>
 
+    <br>
+    <br>
+
     <div class="projectArchives">
       <form>
-
+        <h3 class="archives">Project Archives</h3>
+        <table class="fill">
+          <thead>
+            <tr>
+              <th id="tableHead"></th>
+              <th id="tableHead">Project Name</th>
+              <th id="tableHead">Project Schedule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="radio" name="record">
+              </td>
+              <td>Project 1</td>
+              <td>Project Schedule 1</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="radio" name="record">
+              </td>
+              <td>Project 1</td>
+              <td>Project Schedule 1</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="archiveButtons">
+          <button type="button" class="deleteRow">Delete Row</button>
+          <button type="button" class="ArchiveRow">Archive</button>
+        </div>
       </form>
     </div>
+
     <br>
     <br>
 </body>
