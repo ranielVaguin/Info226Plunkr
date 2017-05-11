@@ -48,22 +48,96 @@ body {
 
 /** Directory **/
 
+
+
 .directoryMenu {
   position: relative;
   background: #557E8B;
-  width: 800px;
-  height: 300px;
+  width: 1000px;
+  height: 100%;
   margin: 0 auto 50px;
   text-align: center;
 }
 
-.directoryList {
-  padding: 50px;
+
+.directoryContainer {
+    padding: 20px 6px 0px 60px;
+    float: left;
+    width: 24.99999%;
 }
 
-.buildingList {
-  padding: 5px;
-  box-sizing: border-box;
+.directoryContent {
+  position: relative;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.directoryContent img {
+  display: block;
+  width: 250px;
+  height: 250px;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  width: 250px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #819FA9;
+}
+
+.directoryContent:hover .overlay {
+  opacity: 0.7;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.quickView {
+	width: 250px;
+	position: relative;
+	height: 50px;
+	background-color: #557E8B;
+	opacity: 0.8;
+	bottom: 50px;
+}
+
+.quickView p {
+  position: absolute;
+  left: 90px;
+  bottom: 0px;
+}
+
+.quickView p a {
+	padding: 10px 15px;
+	background-color: #356372;
+	text-decoration: none;
+}
+
+.buttonView:hover {
+  background: #819FA9;
+  color: #000;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 20px;
 }
 
 /*Building Form*/
