@@ -1,307 +1,142 @@
 <!DOCTYPE html>
-<html ng-app="plunker">
+<html>
 
-<head>
-  <meta charset="utf-8" />
-  <title>AngularJS Plunker</title>
-  <script>
-    document.write('<base href="' + document.location + '" />');
-  </script>
-  <link rel="stylesheet" href="style.css" />
-  <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.12/angular.js" data-semver="1.4.9"></script>
-  <script src="app.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.12/angular.js" data-semver="1.4.9"></script>
+    <script src="app.js"></script>
+  </head>
 
-<body ng-controller="MainCtrl" class="container">
-
-  <div class="logIn">
-    <form>
-      <h3 class="logoName">Happy Building Contractors</h3>
-      <div class="inputForm">
-        <input type="text" placeholder={{username}} ng-model="user">
-      </div>
-      <div class="inputForm">
-        <input type="text" placeholder={{password}} ng-model="pword">
-      </div>
-      <button type="submit" value="Submit" class="signIn" ng-click="clickSIGNIN()">Sign In</button>
-      <button type="submit" value="Cancel" class="cancel" ng-click="clickCANCEL()">Cancel</button>
-      {{feedback}}
-    </form>
-  </div>
-
-  <br>
-  <br>
-
-
-  <div class="directoryMenu">
-    <form>
-      <div class="directoryContainer">
-        <div class="directoryContent">
-          <a><img src="https://vignette4.wikia.nocookie.net/gtawiki/images/b/b2/IAAHeadquarters-GTAV.png"></a>
-          <div class="overlay">
-            <div class="text">Rutherford Building</div>
-          </div>
-        </div>
-        <div class="quickView">
-          <p><a href="#" class="buttonView">View</a></p>
-        </div>
-      </div>
-
-      <div class="directoryContainer">
-        <div class="directoryContent">
-          <a><img src="https://vignette1.wikia.nocookie.net/gtawiki/images/b/bd/ArcadiusBusinessCenter-GTAV.png"></a>
-          <div class="overlay">
-            <div class="text">Victoria Building</div>
-          </div>
-          <div class="quickView">
-            <p><a href="#" class="buttonView">View</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="directoryContainer">
-        <div class="directoryContent">
-          <a><img src="https://vignette2.wikia.nocookie.net/gtawiki/images/2/25/FIBHeadquarters-GTAV.png"></a>
-          <div class="overlay">
-            <div class="text">Hugh McKenzie Building</div>
-          </div>
-          <div class="quickView">
-            <p><a href="#" class="buttonView">View</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="directoryContainer">
-        <div class="directoryContent">
-          <a><img src="https://vignette3.wikia.nocookie.net/gtawiki/images/5/54/LittleSeoulTower-GTAV.png"></a>
-          <div class="overlay">
-            <div class="text">Kirk Building</div>
-          </div>
-          <div class="quickView">
-            <p><a href="#" class="buttonView">View</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="directoryContainer">
-        <div class="directoryContent">
-          <a><img src="https://vignette3.wikia.nocookie.net/gtawiki/images/1/11/WeazelPlaza-GTA5.png"></a>
-          <div class="overlay">
-            <div class="text">Murphy Building</div>
-          </div>
-          <div class="quickView">
-            <p><a href="#" class="buttonView">View</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="directoryContainer">
-        <div class="directoryContent">
-          <a><img src="https://vignette4.wikia.nocookie.net/gtawiki/images/f/f2/SchlongbergSachsCenter-StreetView-GTAV.png"></a>
-          <div class="overlay">
-            <div class="text">Student Union</div>
-          </div>
-          <div class="quickView">
-            <p><a href="#" class="buttonView">View</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="clearfix"></div>
-    </form>
-  </div>
-
-
-
-  <br>
-  <br>
-
-  <div class="buildingMenu">
-    <form>
-
-      <div class="buildingInfo">
-        <h3 class="buildingName">Building Name:</h3>
-        <h4 class="buildingLocation">Building Location:</h4>
-        <h4 class="buildingType">Building Type:</h4>
-        <h4 class="buildingStartDate">Building Start Date: <input type="date"></h4>
-        <h4 class="buildingEndDate">Building End Date: <input type="date"></h4>
-      </div>
-
-      <div class="projectTable">
-        <h3 class="buildingProjects">Building Projects</h3>
-
-        <div class="addProject">
-          <input type="text" id="project" placeholder="Project Name">
-          <input type="text" id="schedule" placeholder="Project Schedule">
-          <input type="button" class="addRow" value="Add Project">
-        </div>
-
-        <table class="fill">
-          <thead>
-            <tr>
-              <th id="tableHead"></th>
-              <th id="tableHead">Project Name</th>
-              <th id="tableHead">Project Schedule</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <input type="radio" name="record">
-              </td>
-              <td>Project 1</td>
-              <td>Project Schedule 1</td>
-            </tr>
-            <tr>
-              <td>
-                <input type="radio" name="record">
-              </td>
-              <td>Project 1</td>
-              <td>Project Schedule 1</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="tableButtons">
-          <button type="button" class="deleteRow">Delete Row</button>
-          <button type="button" class="ArchiveRow">Archive</button>
-          <button type="button" class="viewRow">View Project</button>
-          <button type="button" class="archive">Project Archives</button>
-        </div>
-      </div>
-    </form>
-  </div>
-
-  <br>
-  <br>
-
-  <div class="projectMenu">
-    <form>
-      <div class="projectInfo">
-        <h3 class="projectName">Project Name:</h3>
-        <h4 class="projectStartDate">Start Date: <input type="date"></h4>
-        <h4 class="projectEndDate">Finish Date: <input type="date"></h4>
-        <h4 class="projectContact">Contact Person:</h4>
-        <h4 class="projectManagers">
-            <label id = "projectManager">Project Manager/s: </label>
-				    <select id = "projectManagerList">
-					<option value = "Mark">Mark Capinpin</option>
-					<option value = "Ranielle">Ranielle Aguinaldo</option>
-				</select>
-			  </h4>
-        <h4 class="projectContractor">Contractor/s: </h4>
-      </div>
-
-      <div class="projectWorks">
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Project Name</th>
-              <th>Project Schedule</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <input type="checkbox" name="record">
-              </td>
-              <td>Project 1</td>
-              <td>Project Schedule 1</td>
-            </tr>
-            <tr>
-              <td>
-                <input type="radio" name="record">
-              </td>
-              <td>Project 2</td>
-              <td>Project Schedule 2</td>
-            </tr>
-            <tr>
-              <td>
-                <input type="radio" name="record">
-              </td>
-              <td>Project 3</td>
-              <td>Project Schedule 3</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="commentBox">
-        <div class="comments">
-          <form>
-            <input type="text" id="commentsBox" placeholder="Write Comment">
-          </form>
-          <form>
-            <input type="button" id="addingComment" value="Add Comment">
-          </form>
-        </div>
-
-        <div class="boxContent">
-          <table>
-            <thead>
-              <tr>
-                <th></th>
-                <th>Comments</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <input type="checkbox" name="record">
-                </td>
-                <td>Comments</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="projectButtons">
-            <button type="button" class="deleteRow">Delete Row</button>
-            <button type="button" class="ArchiveRow">Archive</button>
-          </div>
-        </div>
-    </form>
-    </div>
-
+  <body ng-app="myApp" ng-controller="mainCtrl">
+  <div>
+    login form = {{loginForm}} <br>
+    building form = {{buildingForm}} <br>
+    project form = {{projectForm}} <br>
+    directory form = {{directoryForm}}
+  </div> 
     <br>
-    <br>
+    <div id="login_container"  ng-show="loginForm">
+      
+      <form id="login_form">
+        
+        <p>Username:</p>
+          <input type="text" class="input_field" id="username" ng-model="input_username">
+        
+        <br />
+        <br />
+        
+        <p>Password:</p>
+          <input type="password" class="input_field" id="password" ng-model="input_password"> 
 
-    <div class="projectArchives">
-      <form>
-        <h3 class="archives">Project Archives</h3>
-        <table class="fill">
-          <thead>
-            <tr>
-              <th id="tableHead"></th>
-              <th id="tableHead">Project Name</th>
-              <th id="tableHead">Project Schedule</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <input type="radio" name="record">
-              </td>
-              <td>Project 1</td>
-              <td>Project Schedule 1</td>
-            </tr>
-            <tr>
-              <td>
-                <input type="radio" name="record">
-              </td>
-              <td>Project 1</td>
-              <td>Project Schedule 1</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="archiveButtons">
-          <button type="button" class="deleteRow">Delete Row</button>
-          <button type="button" class="ArchiveRow">Archive</button>
-        </div>
+        <br />
+        <br />
+                   
+        <input type="submit" class="submit_button" value="Login" ng-click="checkLogin()">
+        <input type="submit" class="submit_button" value="Cancel" ng-click="cancelLogin()">
+
+        <br />
+        <br />
+
+        <p ng-bind="feedback"></p>
+
+
       </form>
+      
     </div>
+  <br>
+  <br>
+    
+    <div id="directory_container"  ng-show="directoryForm">
+      
+      <form id="login_form">
+        
+        <p>Building Name:</p>
+          <input type="text" class="input_field" id="building_name" ng-model="input_username">
+        
+        <br />
+        <br />
+        
+        <p>Project Name:</p>
+          <input type="text" class="input_field" id="project_name" ng-model="input_password"> 
 
+        <br />
+        <br />
+                   
+        <input type="submit" class="submit_button" value="Projects" ng-click="projectButton()">
+        <input type="submit" class="submit_button" value="Buildings" ng-click="buildingButton()">
+        <input type="submit" class="submit_button" value="Logout" ng-click="logoutButton()">
+        <br />
+        <br />
+
+
+      </form>
+      
+    </div>
+    
     <br>
+  <br>
+    
+    <div id="project_container" ng-show="projectForm">
+      
+      <form id="login_form">
+        
+        <p>Project Name:</p>
+          <input type="text" class="input_field" id="project_name" ng-model="input_username">
+        
+        <br />
+        <br />
+        
+        <p>ID:</p>
+          <input type="text" class="input_field" id="id" ng-model="input_password"> 
+
+        <br />
+        <br />
+                   
+        <input type="submit" class="submit_button" value="Directory" ng-click="directoryButton()">
+        <input type="submit" class="submit_button" value="Buildings" ng-click="buildingButton()">
+        <input type="submit" class="submit_button" value="Logout" ng-click="logoutButton()">
+        <br />
+        <br />
+
+      </form>
+      
+    </div>
+    
     <br>
-</body>
+  <br>
+    
+    <div id="building_container"  ng-show="buildingForm">
+      
+      <form id="login_form">
+        
+        <p>Building Name:</p>
+          <input type="text" class="input_field" id="building_name" ng-model="input_username">
+        
+        <br />
+        <br />
+        
+        <p>Building Type:</p>
+          <input type="text" class="input_field" id="buidling_type" ng-model="input_password"> 
+
+        <br />
+        <br />
+                   
+       <input type="submit" class="submit_button" value="Projects" ng-click="projectButton()">
+      <input type="submit" class="submit_button" value="Directory" ng-click="directoryButton()">
+      <input type="submit" class="submit_button" value="Logout" ng-click="logoutButton()">
+        <br />
+        <br />
+
+
+
+      </form>
+      
+    </div>
+    
+    
+  </body>
 
 </html>
