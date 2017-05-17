@@ -15,13 +15,13 @@
 <body ng-controller="MainCtrl" class="container">
 
   <div class="logIn" ng-show="logInShow">
-    <form ng-controller="LoginCtrl">
+    <form>
       <h3 class="logoName">Happy Building Contractors</h3>
       <div class="inputForm">
         <input type="text" placeholder={{username}} ng-model="user">
       </div>
       <div class="inputForm">
-        <input type="text" placeholder={{password}} ng-model="pword">
+        <input type="password" placeholder={{password}} ng-model="pword">
       </div>
       <button type="submit" value="Submit" class="signIn" ng-click="clickSIGNIN()">Sign In</button>
       <button type="submit" value="Cancel" class="cancel" ng-click="clickCANCEL()">Cancel</button>
@@ -229,12 +229,8 @@
 
       <div class="commentBox">
         <div class="comments">
-          <form>
-            <input type="text" id="commentsBox" placeholder="Write Comment">
-          </form>
-          <form>
-            <input type="button" id="addingComment" value="Add Comment">
-          </form>
+          <input type="text" id="commentsBox" placeholder="Write Comment">
+          <input type="button" id="addingComment" value="Add Comment">
         </div>
 
         <div class="boxContent">
@@ -259,49 +255,51 @@
             <button type="button" class="ArchiveRow">Archive</button>
           </div>
         </div>
+      </div>
     </form>
-    </div>
+  </div>
 
-    <br>
-    <br>
+  <br>
+  <br>
 
-    <div class="projectArchives"  ng-show="projectArchivesShow">
-      <form>
-        <h3 class="archives">Project Archives</h3>
-        <table class="fill">
-          <thead>
-            <tr>
-              <th id="tableHead"></th>
-              <th id="tableHead">Project Name</th>
-              <th id="tableHead">Project Schedule</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <input type="radio" name="record">
-              </td>
-              <td>Project 1</td>
-              <td>Project Schedule 1</td>
-            </tr>
-            <tr>
-              <td>
-                <input type="radio" name="record">
-              </td>
-              <td>Project 1</td>
-              <td>Project Schedule 1</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="archiveButtons">
-          <button type="button" class="deleteRow">Delete Row</button>
-          <button type="button" class="ArchiveRow">Archive</button>
-        </div>
-      </form>
-    </div>
+  <div class="projectArchives" ng-show="projectArchivesShow">
+    <form>
+      <h3 class="archives">Project Archives</h3>
+      <table class="fill">
+        <thead>
+          <tr>
+            <th id="tableHead"></th>
+            <th id="tableHead">Project Name</th>
+            <th id="tableHead">Project Schedule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="radio" name="record">
+            </td>
+            <td>Project 1</td>
+            <td>Project Schedule 1</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="record">
+            </td>
+            <td>Project 1</td>
+            <td>Project Schedule 1</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="archiveButtons">
+        <button type="button" class="deleteRow">Delete Row</button>
+        <button type="button" class="ArchiveRow">Archive</button>
+      </div>
+    </form>
+  </div>
 
-    <br>
-    <br>
+  <br>
+  <br>
+  
 </body>
 
 </html>
